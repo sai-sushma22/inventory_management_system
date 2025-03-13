@@ -49,4 +49,14 @@ npm start
 6. Bulk Delete Gadgets
    - Method: DELETE
    - URL: `http://localhost:3000/api/gadgets/bulk`
+
+### Authentication Endpoints
+
+1. Register User
+   - Method: POST
+   - URL: `http://localhost:3000/api/auth/register`
+
+2. Login User
+   - Method: POST
+   - URL: `http://localhost:3000/api/auth/login`   
      
