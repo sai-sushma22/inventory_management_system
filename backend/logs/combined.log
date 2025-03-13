@@ -116,3 +116,7 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:27:37.250Z"}
 {"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:27:37.250Z"}
 {"level":"info","message":"Gadget created with ID: 8","timestamp":"2025-03-13T11:27:56.548Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T12:11:03.684Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T12:11:03.688Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T12:11:03.711Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T12:11:03.711Z"}

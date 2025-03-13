@@ -42,6 +42,8 @@ class Server {
       });
     });
 
+    const authRoutes = require('./routes/authRoutes');
+    this.app.use('/api/auth', authRoutes);
     const createGadgetRoutes = require('./routes/gadgetRoutes');
     const gadgetRoutes = createGadgetRoutes(this.gadgetModel);
     this.app.use('/api/gadgets', gadgetRoutes);
