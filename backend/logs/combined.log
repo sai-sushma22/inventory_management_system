@@ -1,0 +1,118 @@
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T06:23:49.462Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T06:23:49.468Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T06:23:49.471Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T06:25:39.608Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T06:25:39.612Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T06:25:39.615Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T06:25:39.616Z"}
+{"level":"error","message":"Error fetching gadgets Cannot read properties of undefined (reading 'gadgetModel')","stack":"TypeError: Cannot read properties of undefined (reading 'gadgetModel')\n    at getAllGadgets (/Users/vaibhav/Desktop/inventory_management_system/backend/controllers/gadgetController.js:23:33)\n    at Layer.handle [as handle_request] (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/vaibhav/Desktop/inventory_management_system/backend/node_modules/express/lib/router/index.js:47:12)","timestamp":"2025-03-13T06:26:12.808Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T06:31:05.949Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T06:31:05.954Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T06:34:10.931Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T06:34:10.937Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T06:34:23.230Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T06:34:23.234Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T06:34:53.162Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T06:34:53.167Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T06:35:49.503Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T06:35:49.511Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T06:35:49.516Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T06:35:49.516Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T09:13:35.901Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T09:13:35.911Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T09:13:35.916Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T09:13:35.916Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T09:13:53.410Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T09:13:53.414Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T09:13:53.417Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T09:13:53.417Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T09:14:14.836Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T09:14:14.839Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T09:14:14.843Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T09:14:14.843Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T09:18:02.003Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T09:18:02.007Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T09:18:02.010Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T09:18:02.010Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T10:30:21.681Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T10:30:21.685Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T10:30:21.689Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T10:30:21.689Z"}
+{"level":"info","message":"Gadget created with ID: 1","timestamp":"2025-03-13T10:37:51.187Z"}
+{"level":"info","message":"Gadget 1 updated successfully","timestamp":"2025-03-13T10:39:40.205Z"}
+{"level":"info","message":"Bulk create processed: 2 successful, 0 errors","timestamp":"2025-03-13T10:41:58.735Z"}
+{"level":"info","message":"Bulk update processed: 2 successful, 0 errors","timestamp":"2025-03-13T10:43:31.890Z"}
+{"level":"info","message":"Gadget 1 deleted successfully","timestamp":"2025-03-13T10:44:57.657Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T10:47:19.629Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T10:47:19.633Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T10:47:19.637Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T10:47:19.637Z"}
+{"level":"info","message":"Bulk create processed: 2 successful, 0 errors","timestamp":"2025-03-13T10:47:26.092Z"}
+{"level":"info","message":"Gadget created with ID: 6","timestamp":"2025-03-13T10:47:36.710Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T10:52:04.176Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T10:52:04.181Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T10:52:04.184Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T10:52:04.184Z"}
+{"level":"info","message":"Bulk delete processed: 2 gadgets deleted","timestamp":"2025-03-13T10:52:12.615Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T10:55:45.145Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T10:55:45.149Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T10:55:45.152Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T10:55:45.152Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T10:59:38.871Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T10:59:38.875Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T10:59:38.878Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T10:59:38.878Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:00:20.358Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:00:20.361Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:00:20.364Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:00:20.364Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:00:44.153Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:00:44.156Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:00:44.159Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:00:44.159Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:01:32.474Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:01:32.478Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:01:32.481Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:01:32.481Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:07:36.900Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:07:36.904Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:07:36.906Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:07:36.907Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:07:44.370Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:07:44.373Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:07:44.375Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:07:44.375Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:09:37.788Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:09:37.791Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:09:37.794Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:09:37.794Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:09:38.418Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:09:38.421Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:09:38.423Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:09:38.423Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:15:36.734Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:15:36.738Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:15:36.740Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:15:36.741Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:15:46.185Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:15:46.188Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:15:46.191Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:15:46.191Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:18:09.536Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:18:09.540Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:18:09.542Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:18:09.543Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:18:23.900Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:19:48.316Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:19:48.319Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:19:48.321Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:19:48.322Z"}
+{"level":"info","message":"Gadget created with ID: 7","timestamp":"2025-03-13T11:20:06.193Z"}
+{"level":"info","message":"Gadget 7 updated successfully","timestamp":"2025-03-13T11:20:19.411Z"}
+{"level":"info","message":"Gadget 7 deleted successfully","timestamp":"2025-03-13T11:20:28.699Z"}
+{"level":"info","message":"Bulk delete processed: 2 gadgets deleted","timestamp":"2025-03-13T11:20:40.975Z"}
+{"level":"info","message":"Connected to SQLite database","timestamp":"2025-03-13T11:27:37.242Z"}
+{"level":"info","message":"Gadgets table ensured","timestamp":"2025-03-13T11:27:37.246Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-03-13T11:27:37.250Z"}
+{"level":"info","message":"Visit http://localhost:3000/ for API info","timestamp":"2025-03-13T11:27:37.250Z"}
+{"level":"info","message":"Gadget created with ID: 8","timestamp":"2025-03-13T11:27:56.548Z"}

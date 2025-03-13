@@ -1,0 +1,83 @@
+### Get All Gadgets
+GET http://localhost:3000/api/gadgets
+
+### Get Gadget by ID
+GET http://localhost:3000/api/gadgets/1
+
+### Create Single Gadget
+POST http://localhost:3000/api/gadgets/single
+Content-Type: application/json
+
+{
+  "name": "Smartphone X",
+  "description": "Latest model smartphone",
+  "price": 599.99,
+  "quantity": 50,
+  "category": "Electronics",
+  "brand": "TechBrand",
+  "image_url": "/uploads/smartphone.jpg"
+}
+
+### Create Bulk Gadgets
+POST http://localhost:3000/api/gadgets/bulk
+Content-Type: application/json
+
+[
+  {
+    "name": "Wireless Earbuds",
+    "description": "Noise-cancelling earbuds",
+    "price": 199.99,
+    "quantity": 30,
+    "category": "Audio",
+    "brand": "SoundWave"
+  },
+  {
+    "name": "Smart Watch",
+    "description": "Fitness tracking smartwatch",
+    "price": 249.99,
+    "quantity": 25,
+    "category": "Wearables",
+    "brand": "FitTech"
+  }
+]
+
+### Update Single Gadget
+PUT http://localhost:3000/api/gadgets/single/1
+Content-Type: application/json
+
+{
+  "name": "Updated Smartphone",
+  "price": 649.99
+}
+
+### Update Bulk Gadgets
+PUT http://localhost:3000/api/gadgets/bulk
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "name": "Updated Gadget 1"
+  },
+  {
+    "id": 2,
+    "price": 299.99
+  }
+]
+
+### Delete Single Gadget
+DELETE http://localhost:3000/api/gadgets/single/1
+
+### Delete Bulk Gadgets
+DELETE http://localhost:3000/api/gadgets/bulk
+Content-Type: application/json
+
+{
+  "ids": [2, 3]
+}
+
+### Get Gadget Count
+GET http://localhost:3000/api/gadgets/count
+
+### Check Gadget Existence
+GET http://localhost:3000/api/gadgets/exists/1
