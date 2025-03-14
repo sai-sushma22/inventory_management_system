@@ -5,6 +5,7 @@ const GadgetModel = require('./models/gadgetModel');
 const appConfig = require('./config/app.config');
 const logger = require('./utils/logger');
 const errorMiddleware = require('./middleware/errorMiddleware');
+const path = require('path');
 
 class Server {
   constructor() {
@@ -26,8 +27,18 @@ class Server {
   }
 
   initializeMiddleware() {
+    // Increase payload size
     this.app.use(cors(appConfig.cors));
-    this.app.use(express.json());
+    this.app.use(express.json({
+      limit: '50mb' // Increase JSON payload limit
+    }));
+    this.app.use(express.urlencoded({ 
+      limit: '50mb', 
+      extended: true 
+    }));
+
+    // Serve static files for uploads
+    this.app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
   }
 
   initializeRoutes() {

@@ -8,15 +8,18 @@ class GadgetController {
   async getAllGadgets(req, res) {
     try {
       const { 
-        page, 
-        limit, 
-        search
+        page = 1, 
+        limit = 10, 
+        search 
       } = req.query;  
+      const pageNum = Math.max(1, parseInt(page) || 1);
+      const limitNum = Math.min(100, Math.max(1, parseInt(limit) || 10));
       const result = await this.gadgetModel.findAll({
-        page: parseInt(page) || 1,
-        limit: parseInt(limit) || 10,
+        page: pageNum,
+        limit: limitNum,
         search
       });
+
       res.json({
         success: true,
         ...result
@@ -31,56 +34,23 @@ class GadgetController {
     }
   }
 
-  async getGadgetById(req, res) {
-    try {
-      const { id } = req.params;
-      const gadget = await this.gadgetModel.findById(id);
-
-      if (!gadget) {
-        return res.status(404).json({
-          success: false,
-          message: 'Gadget not found'
-        });
-      }
-      res.json({
-        success: true,
-        data: gadget
-      });
-    } catch (error) {
-      logger.error(`Error fetching gadget ${req.params.id}`, error);
-      res.status(500).json({
-        success: false,
-        message: 'Failed to fetch gadget',
-        error: error.message
-      });
-    }
-  }
-
   async createSingleGadget(req, res) {
     try {
       const gadgetData = req.body;
-      if (!gadgetData.name) {
+      const validationErrors = this.validateGadgetData(gadgetData);
+      if (validationErrors.length > 0) {
         return res.status(400).json({
           success: false,
-          message: 'Name is required'
+          message: 'Validation failed',
+          errors: validationErrors
         });
       }
-      if (!gadgetData.price) {
-        return res.status(400).json({
-          success: false,
-          message: 'Price is required'
-        });
-      }
-      if (!gadgetData.quantity && gadgetData.quantity !== 0) {
-        return res.status(400).json({
-          success: false,
-          message: 'Quantity is required'
-        });
-      }
-      const createdGadget = await this.gadgetModel.create(gadgetData);
+
+      const sanitizedData = this.sanitizeGadgetData(gadgetData);
+      const createdGadget = await this.gadgetModel.create(sanitizedData);
       res.status(201).json({
         success: true,
-        data: createdGadget,
+        gadgets: [createdGadget],
         message: 'Gadget created successfully'
       });
     } catch (error) {
@@ -93,28 +63,84 @@ class GadgetController {
     }
   }
 
+  validateGadgetData(data) {
+    const errors = [];
+
+    if (!data.name || data.name.trim() === '') {
+      errors.push('Name is required and cannot be empty');
+    }
+
+    if (data.name && data.name.length > 100) {
+      errors.push('Name cannot exceed 100 characters');
+    }
+
+    if (data.price === undefined || data.price === null) {
+      errors.push('Price is required');
+    }
+
+    if (typeof data.price === 'number' && data.price <= 0) {
+      errors.push('Price must be a positive number');
+    }
+
+    if (data.quantity === undefined || data.quantity === null) {
+      errors.push('Quantity is required');
+    }
+
+    if (typeof data.quantity === 'number' && data.quantity < 0) {
+      errors.push('Quantity cannot be negative');
+    }
+
+    return errors;
+  }
+
+  sanitizeGadgetData(data) {
+    return {
+      name: data.name ? data.name.trim() : '',
+      description: data.description ? data.description.trim() : '',
+      price: parseFloat(data.price) || 0,
+      quantity: parseInt(data.quantity) || 0,
+      image_url: data.image_url || null,
+      category: data.category || null,
+      brand: data.brand || null
+    };
+  }
+
   async createBulkGadgets(req, res) {
     try {
       const gadgets = req.body;
+
       if (!Array.isArray(gadgets) || gadgets.length === 0) {
         return res.status(400).json({
           success: false,
           message: 'Invalid input. Expected an array of gadgets'
         });
       }
-      const invalidGadgets = gadgets.filter(gadget => 
-        !gadget.name || 
-        !gadget.price || 
-        (gadget.quantity === undefined && gadget.quantity !== 0)
-      );
+
+      const processedGadgets = [];
+      const invalidGadgets = [];
+
+      for (const gadget of gadgets) {
+        const validationErrors = this.validateGadgetData(gadget);
+        
+        if (validationErrors.length > 0) {
+          invalidGadgets.push({
+            gadget,
+            errors: validationErrors
+          });
+        } else {
+          processedGadgets.push(this.sanitizeGadgetData(gadget));
+        }
+      }
+
       if (invalidGadgets.length > 0) {
         return res.status(400).json({
           success: false,
-          message: 'Some gadgets are missing required fields',
+          message: 'Some gadgets have validation errors',
           invalidGadgets
         });
       }
-      const result = await this.gadgetModel.createBulk(gadgets);
+
+      const result = await this.gadgetModel.createBulk(processedGadgets);
       res.status(201).json({
         success: true,
         ...result,

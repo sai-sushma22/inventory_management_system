@@ -13,11 +13,11 @@ class AuthController {
           message: 'Please provide username, email, and password'
         });
       }
-      const existingUser = await UserModel.findUser(username);
+      const existingUser = await UserModel.findUser(email);
       if (existingUser) {
         return res.status(400).json({
           success: false,
-          message: 'Username already exists'
+          message: 'User already exists'
         });
       }
       const newUser = await UserModel.registerUser({
@@ -46,22 +46,22 @@ class AuthController {
 
   async login(req, res) {
     try {
-      const { username, password } = req.body;
-      if (!username || !password) {
+      const { email, password } = req.body;
+      if (!email || !password) {
         return res.status(400).json({
           success: false,
-          message: 'Please provide username and password'
+          message: 'Please provide email and password'
         });
       }
-
-      const user = await UserModel.findUser(username);
+  
+      const user = await UserModel.findUser(email);
       if (!user) {
         return res.status(401).json({
           success: false,
           message: 'Invalid credentials'
         });
       }
-
+  
       const isMatch = bcrypt.compareSync(password, user.password);
       if (!isMatch) {
         return res.status(401).json({
@@ -69,7 +69,7 @@ class AuthController {
           message: 'Invalid credentials'
         });
       }
-
+  
       const token = AuthMiddleware.generateToken(user);
       res.json({
         success: true,
